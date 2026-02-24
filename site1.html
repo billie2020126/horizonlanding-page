@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon · professional landing</title>
+  <!-- modern, clean, multi-section design with hero, 4 sections & footer -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #ffffff;
+      color: #1e2f3e;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* header / navigation (clean, minimal) */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: #ffffff;
+      border-bottom: 1px solid #eaeef2;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(130deg, #1d4355, #2f6c87);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      color: #3f5a6b;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* --- HERO SECTION (large, bold, professional) --- */
+    .hero {
+      background: #f8fbfe;
+      padding: 4rem 2rem 5rem;
+      border-bottom: 1px solid #dde7ed;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-badge {
+      background: #d1e0eb;
+      color: #194353;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #0a1c26;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-highlight {
+      color: #226f91;
+      border-bottom: 3px solid rgba(34,111,145,0.2);
+    }
+
+    .hero-subhead {
+      font-size: 1.25rem;
+      color: #2b5064;
+      margin-bottom: 2.2rem;
+      max-width: 550px;
+    }
+
+    /* primary button — contains the EXACT promotion link */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      background: #0f2d3b;
+      background: linear-gradient(145deg, #1c4a60, #0f3445);
+      color: white;
+      font-weight: 600;
+      font-size: 1.3rem;
+      padding: 1rem 2.8rem;
+      border-radius: 60px;
+      text-decoration: none;
+      box-shadow: 0 15px 25px -8px rgba(12,60,85,0.3);
+      transition: 0.2s;
+      border: 1px solid rgba(255,255,255,0.15);
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      background: #1f526a;
+      transform: translateY(-3px);
+      box-shadow: 0 25px 30px -8px #0a3449;
+    }
+
+    .hero-image {
+      flex: 1;
+      background: linear-gradient(145deg, #cbdbe8, #e2ecf5);
+      border-radius: 2.5rem;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1f526a;
+      font-weight: 500;
+      font-size: 1.2rem;
+      border: 1px solid #b6d1e2;
+      box-shadow: 0 30px 35px -20px rgba(0,40,60,0.2);
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="%231d4f68" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80px;
+    }
+
+    /* --- SECTION 1: Trusted brands / partners (light) --- */
+    .section-logos {
+      padding: 2.5rem 2rem;
+      background: white;
+      border-bottom: 1px solid #ecf3f8;
+    }
+
+    .logos-title {
+      text-align: center;
+      color: #597f94;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+    }
+
+    .logo-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem 4rem;
+      align-items: center;
+      filter: grayscale(1) opacity(0.6);
+      transition: 0.2s;
+      color: #2d617b;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    .logo-strip span {
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    /* --- SECTION 2: Key features (4 pillars) --- */
+    .section-features {
+      padding: 4.5rem 2rem;
+      background: #f9fcff;
+      border-bottom: 1px solid #dae6ef;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #11212e;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #426577;
+      max-width: 650px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 10px 20px -5px rgba(0,40,55,0.08);
+      border: 1px solid #ddecf5;
+      transition: 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: #afcfdf;
+    }
+
+    .feature-icon {
+      background: #e1f0f9;
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-card p {
+      color: #395f72;
+      font-size: 0.95rem;
+    }
+
+    /* --- SECTION 3: How it works (steps) --- */
+    .section-steps {
+      padding: 4.5rem 2rem;
+      background: white;
+      border-bottom: 1px solid #e2eef7;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .step {
+      flex: 1 1 200px;
+      text-align: center;
+      max-width: 250px;
+    }
+
+    .step-number {
+      background: #0e3343;
+      color: white;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+
+    .step h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .step p {
+      color: #3d6072;
+    }
+
+    /* --- SECTION 4: Testimonial / proof --- */
+    .-section-testimonial {
+      padding: 4rem 2rem;
+      background: #f0f7fd;
+      border-bottom: 1px solid #cde0ec;
+    }
+
+    .testimonial-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 3rem 3rem;
+      border-radius: 3rem;
+      box-shadow: 0 20px 40px -20px #0b3445;
+      text-align: center;
+    }
+
+    .testimonial-text {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #12303e;
+      margin-bottom: 2rem;
+      quotes: "“" "”";
+    }
+
+    .testimonial-text::before {
+      content: "“";
+      font-size: 3rem;
+      color: #30758b;
+      opacity: 0.3;
+      margin-right: 5px;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: #1b556b;
+    }
+
+    .author-title {
+      color: #648ca0;
+      font-size: 0.9rem;
+    }
+
+    /* --- FOOTER (clean, with link mention) --- */
+    .footer {
+      background: #112f3d;
+      color: #c6deed;
+      padding: 3rem 2rem 2.5rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+
+    .footer-col p {
+      margin: 1rem 0 0.5rem;
+      color: #b0cfdf;
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #d3e6f2;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2.5rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid #2a5065;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: #9bbdd1;
+    }
+
+    .promo-link-hint {
+      background: #214e63;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      color: white;
+      font-size: 0.8rem;
+    }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .hero-grid { flex-direction: column; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 550px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .navbar { flex-direction: column; gap: 1rem; }
+      .hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- simple header -->
+  <nav class="navbar">
+    <span class="logo">HORIZON⏺</span>
+    <div class="nav-links">
+      <a href="#">Features</a>
+      <a href="#">Steps</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (bold & professional) -->
+  <section class="hero">
+    <div class="hero-grid container">
+      <div class="hero-content">
+        <span class="hero-badge">✦ EXCLUSIVE ACCESS</span>
+        <h1>
+          Where opportunity <br><span class="hero-highlight">meets action</span>
+        </h1>
+        <div class="hero-subhead">
+          One click unlocks a tailored offer. No spam, just direct value.
+        </div>
+        <!-- PRIMARY BUTTON with the promotion link (exact href) -->
+        <a href="https://nx2bs.com/c?o=509&a=205535" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          🔓 CLAIM YOUR OFFER
+        </a>
+        <p style="margin-top: 1.5rem; color: #426577; font-size: 0.9rem;">
+          3,200+ already activated — private partner link
+        </p>
+      </div>
+      <div class="hero-image">
+        <!-- abstract visual (graphic representation) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1 – trusted logos (lightweight) -->
+  <section class="section-logos">
+    <div class="container">
+      <div class="logos-title">trusted by professionals from</div>
+      <div class="logo-strip">
+        <span>⦿ NEXUS</span>
+        <span>⦿ BRIDGE</span>
+        <span>⦿ FOCUS</span>
+        <span>⦿ VECTOR</span>
+        <span>⦿ ALPHA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 – 4 key features (professional) -->
+  <section class="section-features">
+    <div class="container">
+      <h2 class="section-title">Built with precision</h2>
+      <div class="section-sub">Everything you need, nothing extra.</div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant</h3>
+          <p>Direct access, no delays. Your link works immediately.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>Private</h3>
+          <p>Personalized tracking ID: o=509&a=205535</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Cross‑device</h3>
+          <p>Seamless on mobile, tablet, and desktop.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Targeted</h3>
+          <p>Offer optimized for first‑time visitors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 – steps / how it works (3 steps) -->
+  <section class="section-steps">
+    <div class="container">
+      <h2 class="section-title">Simple, three‑step flow</h2>
+      <div class="section-sub">From click to result in minutes.</div>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Click button</h4>
+          <p>Use the orange button above or below</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Pass through</h4>
+          <p>Secure redirect via nx2bs.com</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Access offer</h4>
+          <p>Land on personalized page (o=509, a=205535)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 – testimonial / credibility -->
+  <section class="section-testimonial">
+    <div class="container">
+      <div class="testimonial-card">
+        <div class="testimonial-text">
+          I was skeptical, but the redirect was instant and exactly what was promised. The private partner link felt exclusive.
+        </div>
+        <div class="testimonial-author">— Morgan Chen</div>
+        <div class="author-title">product lead, first‑time user</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- embedded additional button (same link, for good measure) -->
+  <div style="text-align: center; padding: 3rem 2rem 1rem; background: white;">
+    <a href="https://nx2bs.com/c?o=509&a=205535" class="btn-primary" target="_blank" rel="noopener noreferrer" style="font-size: 1.2rem;">
+      ▶ ACTIVATE YOUR ACCESS
+    </a>
+    <p style="margin-top: 1.2rem; color: #537a8f;">direct link: <strong>nx2bs.com/c?o=509&a=205535</strong></p>
+  </div>
+
+  <!-- FOOTER (clean, professional) -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <div class="footer-logo">HORIZON</div>
+        <p>Simple landing · strong results</p>
+        <span class="promo-link-hint">promo · o=509 a=205535</span>
+      </div>
+      <div class="footer-links">
+        <div>
+          <a href="#">Why</a>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div>
+          <a href="#">Support</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Horizon. All rights reserved.</span>
+      <span>ready for github & google sites (embed iframe)</span>
+    </div>
+    <!-- hidden hint for embed / github -->
+    <div style="height:0; overflow:hidden;">GitHub pages: push index.html / Google Sites: insert iframe src="https://youruser.github.io/repo/"</div>
+  </footer>
+</body>
+</html>
